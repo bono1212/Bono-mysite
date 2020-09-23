@@ -2,11 +2,11 @@
 html, body {font-family: 'Barlow Condensed', sans-serif;}
 
 .header-wrapper {width: 100%; height: 100vh; position: relative; color: #fff;}
-.header-wrapper .t-wrap {width: 100%; height: 50px; background-color: #111; position: absolute;  align-items: center;}
-.header-wrapper .t-wrap .t-lt {display: flex;}
+.header-wrapper .t-wrap {width: 100%; height: 50px; background-color: #111; position: absolute; display: flex; justify-content: space-between; align-items: center;}
+.header-wrapper .t-wrap .t-lt {display: flex; border: 1px solid yellow;}
 .header-wrapper .t-wrap .t-lt h2 {font-size: 15px;}
 .header-wrapper .t-wrap .top-lt-sns {display: flex;}
-.header-wrapper .t-wrap .t-rt {display: flex; justify-content: flex-end;}
+.header-wrapper .t-wrap .t-rt {display: flex; justify-content: flex-end; border: 1px solid green;}
 
 .header-wrapper .banner-wrap {position: absolute; width: 100%; height: 100%;}
 .header-wrapper .banner-wrap {position: absolute; width: 100%; height: 100%; top: 150px; left: 0;}
