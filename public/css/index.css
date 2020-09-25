@@ -80,12 +80,12 @@ img.rotate {animation: rotate 5s linear infinite; transform-origin: 50% 50%; tra
 .small-ban-wrapper .small-banner .box:hover img {transform: scale(1.1);}
 
 /* newsletter-wrapper */
-.news-wrapper {width: 100%; height: 450px; background-color: #111; color: #fff; flex-direction: column; justify-content: center; display: flex; align-items: center; }
-.news-wrapper .title {font-size: 55px; font-family: 'Barlow Condensed', sans-serif;}
-.news-wrapper .icons {font-size: 20px; margin-right: 30px;}
-.news-wrapper input {width: 950px; height: 50px; background-color: #282828; border: none; padding: 12px 15px; margin: 25px 0;}
-.news-wrapper .form-info button {width: 130px; height: 50px; background-color: #282828; color: #fff; border: none; font-size: 18px; font-family: 'Barlow Condensed', sans-serif;}
-.news-wrapper span {animation-name: Ani; animation-duration: 1s; animation-play-state: running; animation-iteration-count: infinite;}
+.newsletter-wrapper {width: 100%; height: 450px; background-color: #111; color: #fff; flex-direction: column; justify-content: center; display: flex; align-items: center; }
+.newsletter-wrapper .title {font-size: 55px; font-family: 'Barlow Condensed', sans-serif;}
+.newsletter-wrapper .icons {font-size: 20px; margin-right: 30px;}
+.newsletter-wrapper input {width: 950px; height: 50px; background-color: #282828; border: none; padding: 12px 15px; margin: 25px 0;}
+.newsletter-wrapper .form-info button {width: 130px; height: 50px; background-color: #282828; color: #fff; border: none; font-size: 18px; font-family: 'Barlow Condensed', sans-serif;}
+.newsletter-wrapper span {animation-name: Ani; animation-duration: 1s; animation-play-state: running; animation-iteration-count: infinite;}
 
 @keyframes Ani {
 	0%{opacity: 0;}
@@ -117,10 +117,10 @@ img.rotate {animation: rotate 5s linear infinite; transform-origin: 50% 50%; tra
 
 
 /* ****vid-wrapper***** */
-.crew-wrapper {width: 100%; height: 770px; position: relative; display: flex;}
-.crew-wrapper .left-wrap {width: 40%; font-size: 70px; font-family: 'Barlow Condensed'; font-weight: 600; display: flex; justify-content: flex-end; margin-top: 100px; padding-right: 200px;}
-.crew-wrapper .right-wrap {display: flex; width: 40%; height: 70%; flex-wrap: wrap;}
-.crew-wrapper .right-wrap .member {width: 270px; height: 400px; border: 1px solid red;}
+.crew-wrapper {width: 100%; height: 1100px; position: relative; display: flex;}
+.crew-wrapper .left-wrap {width: 40%; font-size: 70px; font-family: 'Barlow Condensed'; font-weight: 600; display: flex; justify-content: flex-end; margin-top: 120px; padding-right: 200px;}
+.crew-wrapper .right-wrap {display: flex; width: 40%; height: 70%; flex-wrap: wrap; margin-top: 100px;}
+.crew-wrapper .right-wrap .member {width: 270px; height: 400px; margin-top: 50px;}
 .crew-wrapper .right-wrap .member img {width: 220px; height: auto; margin: 0 25px;}
 .crew-wrapper .right-wrap .member .position {font-size: 16px; padding-left: 25px; padding-top: 17px;}
 .crew-wrapper .right-wrap .member .name {font-size: 26px; padding-left: 25px; font-family: 'Barlow Condensed'; font-weight: 600; letter-spacing: -1px;}
@@ -133,3 +133,14 @@ img.rotate {animation: rotate 5s linear infinite; transform-origin: 50% 50%; tra
 	100%{opacity: 1};
 }
 
+/* *******news-wrapper********* */
+.news-wrapper {width: 100%; height: 770px; position: relative; display: flex; background-color: #f5f5f5;}
+.news-wrapper .left-wrap {width: 40%; font-size: 70px; font-family: 'Barlow Condensed'; font-weight: 600; display: flex; justify-content: flex-end; margin-top: 100px; padding-right: 80px;}
+.news-wrapper .right-wrap {display: flex; width: 40%; height: 70%; flex-wrap: wrap;}
+
+.news-wrapper span {animation-name: Ani; animation-duration: 1s; animation-play-state: running; animation-iteration-count: infinite;}
+
+@keyframes Ani {
+	0%{opacity: 0;}
+	100%{opacity: 1};
+}

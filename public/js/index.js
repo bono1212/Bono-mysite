@@ -1,8 +1,8 @@
-/* $(document).ready(function(){
+$(document).ready(function(){
 	$('.titles-wrap').click(function(){
 		$("#text").slideToggle("slow");
 });
-}); */
+});
 
 (function(){
 	var slides = [
@@ -10,7 +10,6 @@
 		{ id: 1, src: '../img/h2-slider-2.jpg', title: 'people2'},
 		{ id: 3, src: '../img/h2-slider-3.jpg', title: 'people3'},
 	];
-
 
 	var $slideWrap = $(".header-wrapper .slide-wrap");
 	var $btnPrev = $(".header-wrapper .btn-prev");
