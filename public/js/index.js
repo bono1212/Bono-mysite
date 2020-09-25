@@ -1,17 +1,4 @@
-$(document).ready(function(){
-	$('.titles-wrap').click(function(){
-		$(this).find("p").slideToggle("slow", function(){
-			if($(this).css("display") == "none") {
-				$(this).parent().find(".line").html("+");
-			}
-			else {
-				$(this).parent().find(".line").html("-");
-
-			}
-		});
-});
-});
-
+/* manin slide */
 (function(){
 	var slides = [
 		{ id: 0, src: '../img/h2-slider-1.jpg', title: 'people1'},
@@ -60,4 +47,35 @@ $(document).ready(function(){
 		$($slides[idx].clone()).appendTo($slideWrap).stop().animate({"opacity": 1}, 500, slideInit);
 	}
 	init();
+})();
+
+/* line down */
+$(document).ready(function(){
+	$('.titles-wrap').click(function(){
+		$(this).find("p").slideToggle("slow", function(){
+			if($(this).css("display") == "none") {
+				$(this).parent().find(".line").html("+");
+			}
+			else {
+				$(this).parent().find(".line").html("-");
+
+			}
+		});
+});
+});
+
+/* ******text slide********* */
+(function(){
+	var n = 1;
+	function ani() {
+		$(".black-wrapper .text-slide").stop().animate({"left": -n*100 + "%"}, 500, function(){
+			if(n == 2) {
+				$(this).css("left", 0);
+				n = 1;
+			} else {
+				n++;
+			}
+		});
+	}
+	setInterval(ani, 5000);
 })();
