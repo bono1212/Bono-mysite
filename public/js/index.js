@@ -1,6 +1,14 @@
 $(document).ready(function(){
 	$('.titles-wrap').click(function(){
-		$("#text").slideToggle("slow");
+		$(this).find("p").slideToggle("slow", function(){
+			if($(this).css("display") == "none") {
+				$(this).parent().find(".line").html("-");
+			}
+			else {
+				$(this).parent().find(".line").html("+");
+
+			}
+		});
 });
 });
 
@@ -27,6 +35,7 @@ $(document).ready(function(){
 			html += '</div>';
 			$slides[i] = $(html);
 		}
+		slideInit();
 	}
 
 	function slideInit() {
