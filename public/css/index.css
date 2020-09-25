@@ -154,8 +154,8 @@ img.rotate {animation: rotate 5s linear infinite; transform-origin: 50% 50%; tra
 
 
  /* ********clients-wrapper******* */
- .clients-wrapper {width: 100%; height: 340px; display: flex; justify-content: center;}
- .clients-wrapper .client-wrap {width: 70%; display: flex; justify-content: space-between; align-items: center; height: 100%;}
+ .clients-wrapper {width: 100%; height: 340px; display: flex; justify-content: center; align-items: center;}
+ .clients-wrapper .client-wrap {width: 70%; display: flex; justify-content: space-between;}
  
  /* ********map-wrapper******* */
  .map-wrapper {width: 100%; height: 500px; border: 1px solid orangered;}
