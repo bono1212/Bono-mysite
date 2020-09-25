@@ -2,10 +2,10 @@ $(document).ready(function(){
 	$('.titles-wrap').click(function(){
 		$(this).find("p").slideToggle("slow", function(){
 			if($(this).css("display") == "none") {
-				$(this).parent().find(".line").html("-");
+				$(this).parent().find(".line").html("+");
 			}
 			else {
-				$(this).parent().find(".line").html("+");
+				$(this).parent().find(".line").html("-");
 
 			}
 		});
@@ -25,17 +25,18 @@ $(document).ready(function(){
 	var $slides =[];
 	var idx= 0;
 	var lastIdx = slides.length - 1;
+	var interval;	
 
 	function init() {
 		var html, i;
 		for(i in slides) {
 			html = '<div class="slide">';
 			html += '<img class="w-100" src="'+slides[i].src+'">';
-			html += '<h1>'+i+'</h1>';
 			html += '</div>';
 			$slides[i] = $(html);
 		}
 		slideInit();
+		interval = setInterval(onNext, 5000);
 	}
 
 	function slideInit() {

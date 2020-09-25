@@ -31,22 +31,22 @@ html, body {width: 100%;}
 .header-wrapper .banner-wrap {width: 100%; overflow: hidden;}
 .header-wrapper .slide-wrap {position: relative;}
 .header-wrapper .slide:nth-child(2) {position: absolute; top: 0; left: 0; opacity: 0;}
-.header-wrapper .btn-prev, .header-wrapper .btn-next {font-size: 30px; color: #fff; position: absolute; cursor: pointer; user-select: none; color: #111; transition: all 0.5s; padding: 0 10px; top: 270px; z-index: 100;}
+.header-wrapper .btn-prev, .header-wrapper .btn-next {font-size: 30px; color: #fff; position: absolute; cursor: pointer; user-select: none; color: #111; transition: all 0.5s; padding: 0 10px; top: 50%; z-index: 100;}
 .header-wrapper .btn-next {right: 0px;}
 .header-wrapper .btn-prev:hover {transform: translateX(10px);}
 .header-wrapper .btn-next:hover {transform: translateX(-10px);}
 
 
 /* ************work-wrapper*************** */
-.work-wrapper {width: 100%; display: flex; justify-content: center; align-items: flex-start; height: 570px; position: relative;}
+.work-wrapper {width: 100%; display: flex; justify-content: center; align-items: flex-start; height: 570px; position: relative; margin-top: 230px;}
 .work-wrapper .titles-wrap {width: 440px; display: flex; flex-direction: column; position: relative; margin-bottom: 5px;}
-.work-wrapper .titles-wrap .title {font-size: 26px; font-family: 'Barlow Condensed', sans-serif; z-index: 1; position: absolute; color:#111; width: 100%; display: flex; justify-content: space-between; padding: 0 10px;}
+.work-wrapper .titles-wrap .title {font-size: 26px; font-family: 'Barlow Condensed', sans-serif; z-index: 1; position: absolute; color:#111; width: 100%; display: flex; justify-content: space-between; padding: 0 10px; font-weight: 600;}
 .work-wrapper .titles-wrap .bg {cursor: pointer; height: 40px;}
 .work-wrapper .titles-wrap .bg::after {background-color: #111; width: 100%; height: 40px; display: block; content: ""; transform-origin: left; transform: scaleX(0); transition: all 0.5s;}
 .work-wrapper .titles-wrap:hover .title {color: #fff;}
 .work-wrapper .titles-wrap:hover .bg::after {transform: scaleX(1);}
 
-.work-wrapper .titles-wrap p {font-size: 15px; padding: 0 10px; letter-spacing: -2px; width: 100%; height: 75px; color: #909090; top: 50px; background-color: #fff; display: none;}
+.work-wrapper .titles-wrap p {font-size: 15px; padding: 0 10px; width: 100%; height: 75px; color: #909090; top: 50px; background-color: #fff; display: none;}
 
 
 /* *******icon-wrapper******* */
