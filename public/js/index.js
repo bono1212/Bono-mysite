@@ -79,3 +79,51 @@ $(document).ready(function(){
 	}
 	setInterval(ani, 5000);
 })();
+
+/* ******text slide********* */
+/* (function(){
+var datas = [
+	{ id: 0, src: '../img/client-1.png', title: 'logo1' },
+	{ id: 1, src: '../img/client-2.png', title: 'logo2' },
+	{ id: 2, src: '../img/client-3.png', title: 'logo3' },
+	{ id: 3, src: '../img/client-4.png', title: 'logo4' },
+	{ id: 4, src: '../img/client-5.png', title: 'logo5' },
+	{ id: 5, src: '../img/client-6.png', title: 'logo6' },
+	{ id: 6, src: '../img/client-7.png', title: 'logo7' },
+	{ id: 7, src: '../img/client-8.png', title: 'logo8' }
+];
+
+var $wrapper = $(".clients-wrapper");
+var $clientWrap = $(".client-wrap", $wrapper);
+var $slides = [];
+var idx = 0;
+var lastIdx = datas.length - 1;
+var target;
+var interval;
+
+function init (){
+	var i, html;
+	for(i in datas) {
+		html  = '<div class="slide">';
+		html += '<img src="'+datas[i].src+'">';
+		html += '</div>';
+		$slides.push($(html));	
+	}
+	slideInit();
+	interval = setInterval(ani, 3000);
+}
+
+function slideInit() {
+	$($slides[idx].clone()).appendTo($clientWrap.empty().attr("style", ""));
+		if(idx == 0) $($slides[lastIdx].clone()).prependTo($clientWrap);
+		else $($slides[idx - 1].clone()).prependTo($clientWrap);
+		for(var i=1; i<=8; i++) {
+			if(idx + i > lastIdx) $($slides[idx + i - 1 - lastIdx].clone()).appendTo($clientWrap);
+			else $($slides[idx + i].clone()).appendTo($clientWrap);
+		}
+}
+function ani() {
+	$clientWrap.stop().animate({"left": target+"%"}, 500, slideInit);
+}
+init();
+})(); */
