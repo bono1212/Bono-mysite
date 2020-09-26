@@ -81,7 +81,7 @@ $(document).ready(function(){
 })();
 
 /* ******text slide********* */
-/* (function(){
+(function(){
 var datas = [
 	{ id: 0, src: '../img/client-1.png', title: 'logo1' },
 	{ id: 1, src: '../img/client-2.png', title: 'logo2' },
@@ -117,7 +117,7 @@ function slideInit() {
 	$($slides[idx].clone()).appendTo($clientWrap.empty().attr("style", ""));
 		if(idx == 0) $($slides[lastIdx].clone()).prependTo($clientWrap);
 		else $($slides[idx - 1].clone()).prependTo($clientWrap);
-		for(var i=1; i<=8; i++) {
+		for(var i=1; i<=7; i++) {
 			if(idx + i > lastIdx) $($slides[idx + i - 1 - lastIdx].clone()).appendTo($clientWrap);
 			else $($slides[idx + i].clone()).appendTo($clientWrap);
 		}
@@ -126,4 +126,4 @@ function ani() {
 	$clientWrap.stop().animate({"left": target+"%"}, 500, slideInit);
 }
 init();
-})(); */
+})();
