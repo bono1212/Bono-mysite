@@ -175,7 +175,7 @@ img.rotate {animation: rotate 5s linear infinite; transform-origin: 50% 50%; tra
 
  /* ********map-wrapper******* */
  .map-wrapper {width: 100%; height: 500px; border: 1px solid orangered;}
-
+ .map-wrapper .map {width: 100%; height: 500px;}
 
 	/* ********hello-wrapper******* */
 	.hello-wrapper {width: 100%; height: 600px; display: flex; justify-content: center; align-items: center;}
