@@ -51,13 +51,13 @@
 })();
 
 /* sub-wrap */
-$(document).ready(function () {
-	$('ul.navi-wrap li').hover(function () {
-		$(this).find('.sub-wrap').stop().show();
-	}, function () {
-		$(this).find('.sub-wrap').stop().hide();
-	});
+
+$('ul.navi-wrap li').hover(function () {
+	$(this).find('.sub-wrap').stop().show();
+}, function () {
+	$(this).find('.sub-wrap').stop().hide();
 });
+
 
 
 /* line down */
@@ -108,7 +108,7 @@ $(document).ready(function () {
 	];
 
 	var $wrapper = $(".clients-wrapper");
-	var $clientWrap = $(".client-wrap", $wrapper);
+	var $clientWrap = $(".slide-wrap", $wrapper);
 	var $slides = [];
 	var idx = 0;
 	var lastIdx = datas.length - 1;
@@ -138,7 +138,10 @@ $(document).ready(function () {
 	}
 
 	function ani() {
-		$clientWrap.stop().animate({ "left": target + "%" }, 500, slideInit);
+		if(idx == 7) idx = 0;
+		else idx++;
+		console.log((-idx*17) + "%");
+		$clientWrap.stop().animate({ "left": (-idx*17) + "%" }, 500, slideInit);
 	}
 
 	init();
