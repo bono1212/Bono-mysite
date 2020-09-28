@@ -49,6 +49,16 @@
 	init();
 })();
 
+/* sub-wrap */
+$(document).ready(function(){
+	$('ul.navi-wrap li').hover(function () {
+		$(this).find('.sub-wrap').stop().show();
+}, function () {
+		$(this).find('.sub-wrap').stop().hide();
+});
+});
+
+
 /* line down */
 $(document).ready(function(){
 	$('.titles-wrap').click(function(){
