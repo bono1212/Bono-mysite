@@ -116,18 +116,20 @@ img.rotate {animation: rotate 3s linear infinite; transform-origin: 50% 50%; tra
 }
 
 /* ****vid-wrapper***** */
-.vid-wrapper {width: 100%; height: 80vh;}
+.video-wrapper {width: 100%; position: relative; height: 500px;}
+.vid-wrapper .video {width:100%; height: 100%; position:absolute; top: 0; left: 0; transform: scale(1.3); transition: all 5s;}
 
 /* **********black-wrapper********** */
-.black-wrapper {width: 100%; height: 420px; background-color: #111; display: flex; align-items: center; overflow: hidden;}
-.black-wrapper .text-slide {color: #fff; width: 100%; position: relative;text-align: center;}
-.black-wrapper .text-slide .slide {position: absolute; width: 100%; top: 0;}
-.black-wrapper .text-slide .slide:nth-child(1) {position: relative; left: 0;}
-.black-wrapper .text-slide .slide:nth-child(2) {left: 100%;}
-.black-wrapper .text-slide .slide:nth-child(3) {left: 200%;}
+.black-wrapper {width: 100%; height: 420px; background-color: #111; display: flex; align-items: center; overflow: hidden; justify-content: center; position: relative;}
+.black-wrapper .stage {width: 80%; border: 1px solid red; background-color: green; }
+.black-wrapper .stage .text-slide {color: #fff; width: 100%; text-align: center;}
+.black-wrapper .stage .text-slide .slide {position: absolute; width: 100%; top: 0;}
+.black-wrapper .stage .text-slide .slide:nth-child(1) {position: relative; left: 0;}
+.black-wrapper .stage .text-slide .slide:nth-child(2) {left: 100%;}
+.black-wrapper .stage .text-slide .slide:nth-child(3) {left: 200%;}
 
-.black-wrapper .text-slide .context {font-size: 26px; font-weight: 400;font-family: 'Barlow Condensed'; line-height: 1.2;}
-.black-wrapper .text-slide .author {font-size: 16px; margin-top: 20px;}
+.black-wrapper .stage .text-slide .context {font-size: 26px; font-weight: 400;font-family: 'Barlow Condensed'; line-height: 1.2;}
+.black-wrapper .stage .text-slide .author {font-size: 16px; margin-top: 20px;}
 
 
 
@@ -173,7 +175,7 @@ img.rotate {animation: rotate 3s linear infinite; transform-origin: 50% 50%; tra
 
 
  /* ********map-wrapper******* */
- .map-wrapper {width: 100%; height: 500px; border: 1px solid orangered;}
+ .map-wrapper {width: 100%; height: 500px;}
  #map {width: 100%; height: 500px;}
 
 	/* ********hello-wrapper******* */
