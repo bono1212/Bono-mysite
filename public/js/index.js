@@ -147,7 +147,8 @@ $(document).ready(function () {
 	init();
 })();
 
-
+var kakaoKey = 'e156b20207fc30ba9c92aa8c562a4eba';
+var appid = '35816cdb26028539cae9216dc75e363e';
 
 var container = document.getElementById('map');
 var options = { 
