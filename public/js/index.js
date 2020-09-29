@@ -147,13 +147,11 @@ $(document).ready(function () {
 	init();
 })();
 
-var kakaoKey = 'e156b20207fc30ba9c92aa8c562a4eba';
-var appid = '35816cdb26028539cae9216dc75e363e';
 
 var container = document.getElementById('map');
 var options = { 
-	center: new kakao.maps.LatLng(41.382051, 2.167046),
-	level: 10
+	center: new kakao.maps.LatLng(37.382051, 128.167046),
+	level: 8
 };
 
 
