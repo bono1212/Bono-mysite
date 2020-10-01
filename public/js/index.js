@@ -147,14 +147,25 @@ $(document).ready(function () {
 	init();
 })();
 
-
-
+/* map */
 var container = document.getElementById('map');
 var options = { 
-	center: new kakao.maps.LatLng(41.382051, 2.167046),
-	level: 10
+	center: new kakao.maps.LatLng(37.561010, 127.076242),
+	level: 8
 };
 
-
-
 var map = new kakao.maps.Map(container, options);
+
+var imageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_red.png',
+    imageSize = new kakao.maps.Size(60, 69),
+    imageOption = {offset: new kakao.maps.Point(27, 69)};
+      
+var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+    markerPosition = new kakao.maps.LatLng(37.54699, 127.09598); 
+
+var marker = new kakao.maps.Marker({
+    position: markerPosition, 
+    image: markerImage 
+});
+
+marker.setMap(map);  
