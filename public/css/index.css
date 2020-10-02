@@ -197,7 +197,7 @@ img.rotate {animation: rotate 3s linear infinite; transform-origin: 50% 50%; tra
 
  /* ********clients-wrapper******* */
  .clients-wrapper .stage {width: 80%; position: relative; overflow: hidden;border: 1px solid blue; height: 500px; margin: auto;}
- .clients-wrapper .stage .slide-wrap {position: relative; border: 1px solid red; width: 150%; left: -25%; display: flex; padding: 8px; align-items: center; justify-content: center; align-items: center; height: 100%;}
+ .clients-wrapper .stage .slide-wrap {position: relative; border: 1px solid red; width: 150%; left: -10%; display: flex; align-items: center; justify-content: center; align-items: center; height: 100%;}
  .clients-wrapper .slide {position: relative; flex: 10% 0 0; border: 1px solid green; text-align: center;}
 
 
