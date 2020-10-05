@@ -79,8 +79,8 @@ html, body {width: 100%; font-size: 1rem; height: 100vh; font-size: 16px;}
 
 
 /* *******icon-wrapper******* */
-.icon-wrapper {width: 100%; height: 60vh; background-color: #f5f5f5; display: flex; align-items: center; justify-content: center;}
-.icon-wrapper .anim-wrap {margin: 0 30px; text-align: center; border: 1px solid green;}
+.icon-wrapper {width: 100%; height: 60vh; background-color: #f5f5f5; display: flex; align-items: center; justify-content: center; flex-wrap: wrap;}
+.icon-wrapper .anim-wrap {flex: 25% 0 0; padding: 0 30px; text-align: center; border: 1px solid green;}
 .icon-wrapper .anim-wrap .title {font-weight: bold; font-size: 1.5em; font-family: 'Barlow Condensed'; margin: 0.75em 0;}
 .icon-wrapper .anim-wrap .text {margin: 12px 0 0;}
 
@@ -97,19 +97,16 @@ img.rotate {animation: rotate 3s linear infinite; transform-origin: 50% 50%; tra
 .op-wrapper {width: 100%; height: 510px; display: flex; align-items: center; justify-content: center; font-family: 'Barlow Condensed'}
 .op-wrapper .op-lt {padding: 0 100px;}
 .op-wrapper .op-rt {justify-content: center; align-items: center; width: 488px; height: 250px;}
-.op-wrapper .op-rt .box {display: flex; font-size: 1em; font-weight: bold; margin-bottom: 2.5rem; justify-content: space-between;}
-.op-wrapper .op-rt .box:nth-child(1) {border-bottom: 4px solid #111; width: 85%;}
-.op-wrapper .op-rt .box:nth-child(2) {border-bottom: 4px solid #111; width: 60%;}
-.op-wrapper .op-rt .box:nth-child(3) {border-bottom: 4px solid #111; width: 67%;}
-.op-wrapper .op-rt .box:nth-child(4) {border-bottom: 4px solid #111; width: 93%;}
+.op-wrapper .op-rt .box {display: flex; font-size: 1em; font-weight: bold; margin-bottom: 2.5rem; justify-content: space-between; border-bottom: 4px solid #111; width: 0%; transition: all 3s;}
 
 
 /* **************small-ban-wrapper *************/
 .small-ban-wrapper {width: 100%;}
 .small-ban-wrapper .small-banner {width: 100%; display: flex; justify-content: space-between;}
-.small-ban-wrapper .small-banner .box {width: 25%; overflow: hidden;}
+.small-ban-wrapper .small-banner .box {width: 25%; overflow: hidden; position: relative;}
 .small-ban-wrapper .small-banner .box img {width: 100%; height: 415px; transition: all 0.5s;}
 .small-ban-wrapper .small-banner .box:hover img {transform: scale(1.1);}
+.small-ban-wrapper .slogan {background-color: #000; color: #fff; position: absolute; top: 0; left: 0; display: none;}
 
 
 /* newsletter-wrapper */
@@ -262,19 +259,24 @@ img.rotate {animation: rotate 3s linear infinite; transform-origin: 50% 50%; tra
 
 	/* ******* 반응형 ************** */
 	@media screen and (max-width: 1199px) {
-	.crew-wrapper .crew-wrap {width: 100%; display: block;}
+		.crew-wrapper .crew-wrap {width: 100%; display: block;}
+		.icon-wrapper .anim-wrap {flex: 50% 0 0;}
 	} 
 
 	@media screen and (max-width: 991px) {
-	.header-wrapper .t-wrap {display: none;}
-	.header-wrapper .top-wrap > ul.navi-wrap {display: none;}
-	.work-wrapper {flex-direction: column; justify-content: center; display: flex; padding: 25px;}
-	.crew-wrapper {width: 100%; display: block;}
-	.crew-wrapper .right-wrap {display: flex; width: 100%; height: 100%; flex-wrap: wrap; border: 1px solid red;}
+		.header-wrapper .t-wrap {display: none;}
+		.header-wrapper .top-wrap > ul.navi-wrap {display: none;}
+		.work-wrapper {flex-direction: column; justify-content: center; display: flex; padding: 25px;}
+		.work-wrapper .work-wrap {flex-direction: column;}
+		.work-wrapper .title-box {width: 100%;}
+		.work-wrapper .work-wrap .image-wrap {width: 100%;}
+		.crew-wrapper {width: 100%; display: block;}
+		.crew-wrapper .right-wrap {display: flex; width: 100%; height: 100%; flex-wrap: wrap; border: 1px solid red;}
+
 	}
 	
 	@media screen and (max-width: 767px) {
-	
+
 	}
 	
 	@media screen and (max-width: 575px) {

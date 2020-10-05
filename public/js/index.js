@@ -1,6 +1,32 @@
-/* *************navi-wrap************* */
-$(".navi-wrap > .navi").mouseover(onOver);
-$(".navi-wrap > .navi").mouseleave(onLeave);
+/**************scroll************* */
+$(window).on("scroll", onScroll);
+function onScroll() {
+	var sctop = $(this).scrollTop();
+	var opWrapper = $(".op-wrapper").offset().top - $(this).height()/2;
+	if(sctop > opWrapper) {
+		$(".op-wrapper").find(".box").each(function(){
+			var pct = $(this).data("pct");
+			$(this).css("width", pct+"%");
+			$(this).find("span").text(pct);
+		});
+	}
+}
+
+$(".small-banner .box").on("mouseenter", function(){
+	$(this).find(".slogan").show();
+});
+$(".small-banner .box").on("mouseleave", function(){
+	$(this).find(".slogan").hide();
+});
+
+$(".small-banner .box").on("mousemove", function(e){
+	$(this).find(".slogan").css({ "top": (e.offsetY + 10) + "px", "left": (e.offsetX + 10) + "px" });
+})
+
+
+/**************navi-wrap************* */
+$(".navi-wrap > .navi").on("mouseenter", onOver);
+$(".navi-wrap > .navi").on("mouseleave", onLeave);
 
 function onOver() {
 	$(this).find(".sub-wrap").show();
@@ -12,8 +38,8 @@ function onLeave() {
 }
 
 /* bar change*/
-$(".bar-wrap").mouseover(onShow);
-$(".bar-wrap").mouseleave(onHide);
+$(".bar-wrap").on("mouseenter", onShow);
+$(".bar-wrap").on("mouseleave", onHide);
 
 function onShow() {
 	$(this).find(".menu").hide();
@@ -26,14 +52,21 @@ function onHide(){
 }
 
 /* bar-side */
-$(function () {
-	$(".bar-wrap .plus").click(function(){
+
+$(".bar-wrap .plus").on("click", function(){
+	var winWid = $(window).width();
+	if(winWid < 768) {
+
+	}
+	else {
 		$(".header-wrapper .bar-side").fadeIn(500);
-	});
-	$(".bar-side .top i").click(function(){
-		$(".header-wrapper .bar-side").fadeOut(500);
-	})
+	}
 });
+
+$(".bar-side .top i").on("click", function(){
+	$(".header-wrapper .bar-side").fadeOut(500);
+});
+
 
 
 /* main slide */
@@ -91,18 +124,17 @@ $(function () {
 
 
 /* line down */
-$(function () {
-	$('.titles-wrap').click(function () {
-		$(this).find("p").slideToggle("slow", function () {
-			if ($(this).css("display") == "none") {
-				$(this).parent().find(".line").html("+");
-			}
-			else {
-				$(this).parent().find(".line").html("-");
-			}
-		});
+$('.titles-wrap').click(function () {
+	$(this).find("p").slideToggle("slow", function () {
+		if ($(this).css("display") == "none") {
+			$(this).parent().find(".line").html("+");
+		}
+		else {
+			$(this).parent().find(".line").html("-");
+		}
 	});
 });
+
 
 
 new WOW({ 
