@@ -12,6 +12,8 @@ function onScroll() {
 	}
 }
 
+
+/* ********small-banner effect********** */
 $(".small-banner .box").on("mouseenter", function(){
 	$(this).find(".slogan").show();
 });
@@ -55,8 +57,8 @@ function onHide(){
 
 $(".bar-wrap .plus").on("click", function(){
 	var winWid = $(window).width();
-	if(winWid < 768) {
-
+	if(winWid < 992) {
+		$(".header-wrapper .bar-menu").slideDown(500);
 	}
 	else {
 		$(".header-wrapper .bar-side").fadeIn(500);
