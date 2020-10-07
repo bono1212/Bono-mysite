@@ -23,7 +23,7 @@ $(".small-banner .box").on("mouseleave", function(){
 
 $(".small-banner .box").on("mousemove", function(e){
 	$(this).find(".slogan").css({ "top": (e.offsetY + 10) + "px", "left": (e.offsetX + 10) + "px" });
-})
+});
 
 
 /**************navi-wrap************* */
@@ -56,13 +56,13 @@ function onHide(){
 /* bar-side */
 
 $(".bar-wrap .plus").on("click", function(){
-	var winWid = $(window).width();
+	/* var winWid = $(window).width();
 	if(winWid < 992) {
 		$(".header-wrapper .bar-menu").slideDown(500);
 	}
-	else {
+	else { */
 		$(".header-wrapper .bar-side").fadeIn(500);
-	}
+	/* } */
 });
 
 $(".bar-side .top i").on("click", function(){
@@ -148,7 +148,6 @@ new WOW({
 /* ******text slide********* */
 (function () {
 	var n = 1;
-
 	function ani() {
 		$(".black-wrapper .slide-wrap").stop().animate({"left": -n*100+ "%"}, 500, function () {
 			if (n == 2) {
@@ -182,7 +181,6 @@ new WOW({
 	var $slides = [];
 	var idx = 0;
 	var lastIdx = datas.length - 1;
-	var target;
 	var interval;
 
 	function init() {
