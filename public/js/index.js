@@ -56,17 +56,18 @@ function onHide(){
 /* bar-side */
 
 $(".bar-wrap .plus").on("click", function(){
-	/* var winWid = $(window).width();
+	var winWid = $(window).width();
 	if(winWid < 992) {
 		$(".header-wrapper .bar-menu").slideDown(500);
 	}
-	else { */
+	else { 
 		$(".header-wrapper .bar-side").fadeIn(500);
-	/* } */
+	 } 
 });
 
 $(".bar-side .top i").on("click", function(){
 	$(".header-wrapper .bar-side").fadeOut(500);
+	$(".header-wrapper .bar-menu").slideUp(500);
 });
 
 
