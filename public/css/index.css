@@ -52,8 +52,9 @@ html, body {width: 100%; font-size: 1rem; height: 100vh; font-size: 16px;}
 .header-wrapper .bar-side .top i:hover {transform: rotate(30deg);}
 
 /* *********slide********** check*/ 
-.header-wrapper .banner-wrap {width: 100%; overflow: hidden; border: 1px solid red; min-height: 500px;}
-.header-wrapper .slide-wrap {position: relative;}
+.header-wrapper .banner-wrap {width: 100%; overflow: hidden; border: 1px solid red; height: 500px;}
+.header-wrapper .slide-wrap {position: relative; height: 100%;}
+.header-wrapper .slide-wrap .slide {height: 100%;}
 .header-wrapper .slide:nth-child(2) {position: absolute; top: 0; left: 0; opacity: 0;}
 .header-wrapper .btn-prev, .header-wrapper .btn-next {font-size: 2em; color: #fff; position: absolute; cursor: pointer; user-select: none; color: #111; transition: all 0.5s; padding: 0 10px; top: 50%;}
 .header-wrapper .btn-next {right: 0px;}

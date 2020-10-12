@@ -91,8 +91,7 @@ $(".bar-side .top i").on("click", function(){
 	function init() {
 		var html, i;
 		for (i in slides) {
-			html = '<div class="slide">';
-			html += '<img class="w-100" src="' + slides[i].src + '">';
+			html = '<div class="slide" style="background-image: url('+slides[i].src+')">';
 			html += '</div>';
 			$slides[i] = $(html);
 		}
