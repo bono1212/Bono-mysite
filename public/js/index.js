@@ -96,7 +96,7 @@ $(".bar-side .top i").on("click", function(){
 			$slides[i] = $(html);
 		}
 		slideInit();
-		interval = setInterval(onNext, 5000);
+		interval = setInterval(onNext, 3000);
 	}
 
 	function slideInit() {
