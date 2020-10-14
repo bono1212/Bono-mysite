@@ -1,0 +1,11 @@
+	html, body {width: 100%; font-size: 1rem; font-size: 16px;}
+
+	.header-wrapper {width: 100%; position: relative; font-size: 1rem; border: 1px solid green;}
+	.header-wrapper .banner-wrap {width: 100%; overflow: hidden; height: 500px;}
+	.header-wrapper .slide-wrap {position: relative; height: 100%;}
+	.header-wrapper .slide-wrap .slide {height: 100%;}
+	.header-wrapper .slide:nth-child(2) {position: absolute; top: 0; left: 0; opacity: 0;}
+	.header-wrapper .btn-prev, .header-wrapper .btn-next {font-size: 2em; color: #fff; position: absolute; cursor: pointer; user-select: none; color: #111; transition: all 0.5s; padding: 0 10px; top: 50%;}
+	.header-wrapper .btn-next {right: 0px;}
+	.header-wrapper .btn-prev:hover {transform: translateX(10px);}
+	.header-wrapper .btn-next:hover {transform: translateX(-10px);}
