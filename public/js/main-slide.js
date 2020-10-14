@@ -27,7 +27,7 @@
 	$btnNext.click(onNext);
 
 	function onPrev() {
-		idx = (idx == 0) ? lastIdx : idx - 1;
+		idx = (idx == 0) ? lastIdx : idx - 1; 
 		ani();
 	}
 
