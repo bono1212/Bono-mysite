@@ -1,8 +1,8 @@
 (function () {
 	var slides = [
-		{ id: 0, src: '../img/h2-slider-1.jpg', title: 'people1' },
-		{ id: 1, src: '../img/h2-slider-2.jpg', title: 'people2' },
-		{ id: 3, src: '../img/h2-slider-3.jpg', title: 'people3' },
+		{ id: 0, src: '../img/h2-slider-1.jpg', title: 'people1'},
+		{ id: 1, src: '../img/h2-slider-2.jpg', title: 'people2'},
+		{ id: 3, src: '../img/h2-slider-3.jpg', title: 'people3'}
 	];
 
 	var $slideWrap = $(".header-wrapper .slide-wrap");
@@ -17,6 +17,7 @@
 		var html, i;
 		for (i in slides) {
 			html = '<div class="slide" style="background-image: url('+slides[i].src+')">';
+			html += '<div class="text">'+slides[i].text+'</div>'; 
 			html += '</div>';
 			$slides[i] = $(html);
 		}
@@ -25,7 +26,11 @@
 	}
 
 	function slideInit() {
-		$slideWrap.html($slides[idx].clone());
+		//$slideWrap.html($slides[idx].clone());
+		var $txt = $($slides[idx].clone()).appendTo($slideWrap.empty());
+		$txt.find(".text").css("opacity");
+		$txt.find(".text").css("transform");
+		$txt.find(".text").css({"opacity": 1, "transform": "translateX(0)"});
 	}
 
 	$btnPrev.click(onPrev);
