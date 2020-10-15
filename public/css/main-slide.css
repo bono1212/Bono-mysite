@@ -30,7 +30,7 @@
 	}
 	@keyframes small-bg {
 		0% {width: 0;}
-		100% {width: 500px;}
+		100% {width: 550px;}
 	}
 	@keyframes select-bg {
 		0% {width: 0;}
