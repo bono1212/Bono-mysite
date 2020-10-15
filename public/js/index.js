@@ -109,48 +109,67 @@ new WOW({
 })();
 
 
-/* ******main slide********* */
+/* ******logo slide********* */
 (function () {
-
-	var $slideWrap = $(".header-wrapper .slide-wrap");
-	var $btnPrev = $(".header-wrapper .btn-prev");
-	var $btnNext = $(".header-wrapper .btn-next");
-	var slides = $(".slide-wrap .slide");
+	var datas = [
+		{ id: 0, src: '../img/client-1.png', title: 'logo1' },
+		{ id: 1, src: '../img/client-2.png', title: 'logo2' },
+		{ id: 2, src: '../img/client-3.png', title: 'logo3' },
+		{ id: 3, src: '../img/client-4.png', title: 'logo4' },
+		{ id: 4, src: '../img/client-5.png', title: 'logo5' },
+		{ id: 5, src: '../img/client-6.png', title: 'logo6' },
+		{ id: 6, src: '../img/client-7.png', title: 'logo7' },
+		{ id: 7, src: '../img/client-8.png', title: 'logo8' },
+		{ id: 8, src: '../img/client-1.png', title: 'logo1' },
+		{ id: 9, src: '../img/client-2.png', title: 'logo2' },
+		{ id: 10, src: '../img/client-3.png', title: 'logo3' },
+		{ id: 11, src: '../img/client-4.png', title: 'logo4' },
+		{ id: 12, src: '../img/client-5.png', title: 'logo5' },
+		{ id: 13, src: '../img/client-6.png', title: 'logo6' },
+		{ id: 14, src: '../img/client-7.png', title: 'logo7' },
+		{ id: 15, src: '../img/client-8.png', title: 'logo8' }
+	];
+	var $wrapper = $(".clients-wrapper");
+	var $clientWrap = $(".slide-wrap", $wrapper);
+	var $slides = [];
 	var idx = 0;
-	var lastIdx = slides.length - 1;
+	var lastIdx = datas.length - 1;
 	var interval;
 
 	function init() {
+		var i, html;
+		for (i in datas) {
+			html = '<div class="slide">';
+			html += '<img src="' + datas[i].src + '" class="w100">';
+			html += '</div>';
+			$slides.push($(html));
+		}
 		slideInit();
-		interval = setInterval(onNext, 3000);
+		interval = setInterval(ani, 3000);
 	}
 
 	function slideInit() {
-		$(slides[idx]).clone().appendTo($slideWrap.empty());
-	}
-
-	$btnPrev.click(onPrev);
-	$btnNext.click(onNext);
-
-	function onPrev() {
-		idx = (idx == 0) ? lastIdx : idx - 1; 
-		ani();
-	}
-
-	function onNext() {
-		idx = (idx == lastIdx) ? 0 : idx + 1;
-		ani();
+		$($slides[idx].clone()).appendTo($clientWrap.empty().attr("style", ""));
+		if (idx == 0) $($slides[lastIdx].clone()).prependTo($clientWrap);
+		else $($slides[idx - 1].clone()).prependTo($clientWrap);
+		for (var i = 1; i <= 8; i++) {
+			if (idx + i > lastIdx) $($slides[idx + i - 1 - lastIdx].clone()).appendTo($clientWrap);
+			else $($slides[idx + i].clone()).appendTo($clientWrap);
+		}
 	}
 
 	function ani() {
-		$(slides[idx]).clone().appendTo($slideWrap).css("opacity", 0).stop().animate({ "opacity": 1 }, 500, slideInit);
+		if(idx == 8) idx = 0;
+		else idx++;
+		//console.log((-idx*8) + "%");
+		$clientWrap.stop().animate({ "left": (-idx*8) + "%" }, 500, slideInit);
 	}
 
 	init();
 })();
 
 
-$("#video").YTPlayer();
+//$(".video").YTPlayer();
 
 
 /* map */
