@@ -150,6 +150,9 @@ new WOW({
 })();
 
 
+$("#video").YTPlayer();
+
+
 /* map */
 var container = document.getElementById('map');
 var options = { 

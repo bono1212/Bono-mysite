@@ -53,7 +53,7 @@ html, body {width: 100%; font-size: 16px;}
 
 .header-wrapper .bar-side .top i:hover {transform: rotate(30deg);}
 
-/* *********slide********** check*/ 
+/* *********main slide********** check*/ 
 .header-wrapper .banner-wrap {width: 100%; overflow: hidden; height: 500px;}
 .header-wrapper .slide-wrap {position: relative; height: 100%;}
 .header-wrapper .slide-wrap .slide {width: 100%; height: 100%; left: 0; top: 0; position: absolute;}
@@ -124,8 +124,6 @@ html, body {width: 100%; font-size: 16px;}
 .icon-wrapper .anim-box .anim-wrap .title {font-weight: bold; font-size: 1.5em; font-family: 'Barlow Condensed'; margin: 0.75em 0;}
 .icon-wrapper .anim-box .anim-wrap .text {margin: 12px 0 0; box-sizing: none;}
 
-/* img.rotate {animation: rotate 3s linear infinite; transform-origin: 50% 50%; transition-delay: inherit;} */
-
 @keyframes rotate { 
 	0% {transform: rotate(72deg);}
 	20% {transform: rotate(144deg);}
@@ -134,11 +132,6 @@ html, body {width: 100%; font-size: 16px;}
 	80% {transform: rotate(360deg);}
 	100% {transform: rotate(72deg);}
 }
-
-
-
-
-
 
 /* *******op-wrapper******* */
 .op-wrapper {width: 100%; display: flex; align-items: center; justify-content: center; font-family: 'Barlow Condensed', sans-serif; padding: 100px 0;}
@@ -172,11 +165,9 @@ html, body {width: 100%; font-size: 16px;}
 	100%{opacity: 1;}
 }
 
-
 /* *******our-wrapper********** */
 .our-wrapper {width: 100%; position: relative; display: flex; padding: 50px 0;}
 .our-wrapper .left-wrap {width: 40%; font-size: 70px; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; display: flex; justify-content: flex-end;  padding-right: 80px;}
-
 .our-wrapper .right-wrap {display: flex; width: 60%; flex-wrap: wrap;}
 .our-wrapper .part-wrap {width: 50%; position: relative; width: 40%; padding-bottom: 3em; margin-left: 3em;}
 .our-wrapper .part-wrap .big-number {font-size: 14em; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; color: rgba(0,0,0,0.1); position: absolute; top: -75px; left: 0;}
@@ -190,8 +181,11 @@ html, body {width: 100%; font-size: 16px;}
 	100%{opacity: 1;}
 } 
 
-.video-wrapper {width: 100%; height: 100%;}
-.main-video {width: 100%; position: relative; padding-top: 56%;}
+
+/* **********video-wrapper********** */
+
+.video-wrapper {width: 100%; height: 100%; overflow: hidden;}
+.main-video {width: 100%; position: relative; padding-top: 56.2%;}
 .main-video .video {width:100%; height: 100%; position:absolute; top: 0; left: 0;}
 
 
