@@ -3,13 +3,13 @@
 
 /* font-family: 'Barlow Condensed', sans-serif; font-family: 'Hind Siliguri', sans-serif; */
 
-html, body {width: 100%; font-size: 1rem; font-size: 16px;}
+html, body {width: 100%; font-size: 16px;}
 
 .wow-ani {animation-duration: 1s;}
 
 /* ************header-wrapper t-wrap*************** */
 .header-wrapper {width: 100%; position: relative; font-size: 1rem;}
-.header-wrapper .t-wrap {width: 100%; height: 5vh; background-color: #111; display: flex; justify-content: space-between; align-items: center; color: #fff;}
+.header-wrapper .t-wrap {width: 100%; background-color: #111; display: flex; justify-content: space-between; align-items: center; color: #fff; padding: 0.5em 0;}
 .header-wrapper .t-wrap .t-lt {display: flex; margin-left: 2.5em;}
 .header-wrapper .t-wrap .t-lt .top-lt-sns i {margin: 5px; font-size: 15px;}
 .header-wrapper .t-wrap .t-lt h2 {font-size: 1.25em; font-family: 'Barlow Condensed', sans-serif;}
@@ -19,16 +19,18 @@ html, body {width: 100%; font-size: 1rem; font-size: 16px;}
 .header-wrapper .t-wrap .t-rt div i {margin: 0 8px; font-size: 1em;}
 
 /* ***************header .top-wrap************* */
-.header-wrapper .top-wrap {height: 10vh; display: flex;  width: 100%; position: relative; justify-content: space-between; align-items: center; padding: 0 2em;}
+.header-wrapper .top-wrap {display: flex;  width: 100%; position: relative; justify-content: space-between; align-items: center; padding: 0 2em;}
+.header-wrapper .top-wrap .logo-wrap h1 {font-size: 0px;}
 .header-wrapper .top-wrap .logo-wrap img {width: 40px; height: 40px;}
-.header-wrapper .top-wrap .navi-wrap {display: flex; height: 10vh; padding-top: 2em;}
-.header-wrapper .navi-wrap .navi {padding: 0 1em; position: relative; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 1.25em;}
+.header-wrapper .top-wrap .navi-wrap {display: flex;}
+.header-wrapper .navi-wrap .navi {padding: 1em; position: relative; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 1.25em;}
 .header-wrapper .navi-wrap > .navi.navi-static {position: static; justify-content: center;}
-.header-wrapper .sub-wrap {position: absolute; background-color: #111; width: 250px; display: none;  color: #fff; top: 62px; left: -45px; font-family: 'Hind Siliguri', sans-serif; padding: 1em; z-index: 10;}
-.header-wrapper .navi.navi-static .sub-wrap {width: 100%; left: 0; justify-content: center; top: 94px;}
+.header-wrapper .sub-wrap {position: absolute; background-color: #111; width: 250px; display: none;  color: #fff; top: 74px; left: -45px; font-family: 'Hind Siliguri', sans-serif; padding: 1em; z-index: 10;}
+.header-wrapper .navi.navi-static .sub-wrap {width: 100%; left: 0; justify-content: center; top: 74px;}
+.header-wrapper .navi.navi-static .sub-wrap .navi {line-height: 2; font-weight: normal;}
 .header-wrapper .navi.navi-static .sub-wrap div {padding: 0 2em;}
 .header-wrapper .navi.navi-static .sub-wrap div:nth-child(1) {font-size: 1em; font-weight: 500; font-family: 'Barlow Condensed', sans-serif; margin-bottom: 0.75em;}
-.header-wrapper .sub-wrap .navi {font-size: 0.75em; font-family: 'Hind Siliguri', sans-serif; font-weight: normal; line-height: 2;}
+.header-wrapper .navi-wrap .sub-wrap .navi {font-size: 0.75em; font-family: 'Hind Siliguri', sans-serif; font-weight: normal; line-height: 0;}
 
 .header-wrapper .sub-wrap .navi:hover {color: #909090; cursor: pointer;}
 
@@ -45,7 +47,7 @@ html, body {width: 100%; font-size: 1rem; font-size: 16px;}
 .header-wrapper .bar-side .logo {text-align: center; margin: 40px 0;}
 .header-wrapper .bar-side .logo img {width: 180px; height: 180px;}
 .header-wrapper .bar-side .bottom .title {width: 100%; display: flex; flex-direction: column; align-items: center;}
-.header-wrapper .bar-side .bottom .title .box {width: 250px; background-color: #fff; height: 70px; font-size: 65px; line-height: 70px; font-weight: 600; color: #111; font-family: 'Barlow Condensed', sans-serif; margin: 30px 0;}
+.header-wrapper .bar-side .bottom .title .box {width: 250px; background-color: #fff; height: 70px; font-size: 65px; font-weight: 600; color: #111; font-family: 'Barlow Condensed', sans-serif; margin: 30px 0;}
 .header-wrapper .bar-side .bottom .title p {margin: 30px 0;}
 .header-wrapper .bar-side .bottom .sns-logos i {font-size: 24px; padding: 0 10px; margin-top: 30px;}
 
@@ -113,18 +115,29 @@ html, body {width: 100%; font-size: 1rem; font-size: 16px;}
 
 /* *******icon-wrapper******* */
 .icon-wrapper {width: 100%; background-color: #f5f5f5; display: flex; align-items: center; justify-content: center;}
-.icon-wrapper .anim-box {width: 80%; display: flex; align-items: center; justify-content: center; padding: 150px 0;}
+.icon-wrapper .anim-box {width: 90%; display: flex; align-items: center; justify-content: center; padding: 150px 0;}
 .icon-wrapper .anim-box .anim-wrap {flex: 25% 0 0; padding: 0 15px; text-align: center; width: 100%;}
+.icon-wrapper .anim-box .anim-wrap:nth-child(1) img.rotate {animation: rotate 3s linear infinite; transform-origin: 50% 50%;}
+.icon-wrapper .anim-box .anim-wrap:nth-child(2) img {animation: rotate 3s linear infinite; transform-origin: 50% 50%; animation-delay: 0.5s;}
+.icon-wrapper .anim-box .anim-wrap:nth-child(3) img {animation: rotate 3s linear infinite; transform-origin: 50% 50%; animation-delay: initial;}
+.icon-wrapper .anim-box .anim-wrap:nth-child(4) img {animation: rotate 3s linear infinite; transform-origin: 50% 50%; animation-delay: 0.25s;}
 .icon-wrapper .anim-box .anim-wrap .title {font-weight: bold; font-size: 1.5em; font-family: 'Barlow Condensed'; margin: 0.75em 0;}
-.icon-wrapper .anim-box .anim-wrap .text {margin: 12px 0 0;}
+.icon-wrapper .anim-box .anim-wrap .text {margin: 12px 0 0; box-sizing: none;}
 
-img.rotate {animation: rotate 3s linear infinite; transform-origin: 50% 50%; transition-delay: inherit;}
+/* img.rotate {animation: rotate 3s linear infinite; transform-origin: 50% 50%; transition-delay: inherit;} */
 
 @keyframes rotate { 
-	100% {
-		transform: rotate(360deg);
-	}
+	0% {transform: rotate(72deg);}
+	20% {transform: rotate(144deg);}
+	40% {transform: rotate(216deg);}
+	60% {transform: rotate(288deg);}
+	80% {transform: rotate(360deg);}
+	100% {transform: rotate(72deg);}
 }
+
+
+
+
 
 
 /* *******op-wrapper******* */
@@ -161,20 +174,21 @@ img.rotate {animation: rotate 3s linear infinite; transform-origin: 50% 50%; tra
 
 
 /* *******our-wrapper********** */
-.our-wrapper {width: 100%; position: relative; display: flex; padding: 50px 0 150px 0;}
-.our-wrapper .left-wrap {width: 40%; font-size: 70px; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; display: flex; justify-content: flex-end; margin-top: 80px; padding-right: 80px;}
-.our-wrapper .right-wrap {display: flex; width: 50%; height: 70%; flex-wrap: wrap;}
-.our-wrapper .part-wrap {width: 50%;}
-.our-wrapper .part-wrap .big-number {font-size: 15em; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; color: rgba(0,0,0,0.1); position: relative; height: 100px; width: 50px;}
-.our-wrapper .part-wrap .small-text {margin: 80px 0 0 50px}
-.our-wrapper .part-wrap .small-title {font-size: 26px; z-index: 2; font-family: 'Barlow Condensed'; font-weight: bold; line-height: 1.1; margin: 0 0 14px;}
-.our-wrapper .part-wrap .content {font-size: 16px; color: #909090;}
+.our-wrapper {width: 100%; position: relative; display: flex; padding: 50px 0;}
+.our-wrapper .left-wrap {width: 40%; font-size: 70px; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; display: flex; justify-content: flex-end;  padding-right: 80px;}
+
+.our-wrapper .right-wrap {display: flex; width: 60%; flex-wrap: wrap;}
+.our-wrapper .part-wrap {width: 50%; position: relative; width: 40%; padding-bottom: 3em; margin-left: 3em;}
+.our-wrapper .part-wrap .big-number {font-size: 14em; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; color: rgba(0,0,0,0.1); position: absolute; top: -75px; left: 0;}
+.our-wrapper .part-wrap .small-text {margin: 80px 0 0 50px;}
+.our-wrapper .part-wrap .small-title {font-size: 1.75em; z-index: 2; font-family: 'Barlow Condensed'; font-weight: bold; line-height: 1; margin: 0 0 14px;}
+.our-wrapper .part-wrap .content {font-size: 0.85em; color: #909090; line-height: 1.6;}
 .our-wrapper span {animation-name: Ani; animation-duration: 1s; animation-play-state: running; animation-iteration-count: infinite;}
 
 @keyframes Ani {
 	0%{opacity: 0;}
 	100%{opacity: 1;}
-}
+} 
 
 .video-wrapper {width: 100%; height: 100%;}
 .main-video {width: 100%; position: relative; padding-top: 56%;}
@@ -346,11 +360,11 @@ img.rotate {animation: rotate 3s linear infinite; transform-origin: 50% 50%; tra
 	.small-ban-wrapper .small-banner {width: 100%;}
 	.small-ban-wrapper .small-banner .box {width: 50%;}
 	.our-wrapper {width: 100%; flex-direction: column; padding-left: 30px;}
-	.our-wrapper .right-wrap {width: 100%; flex-direction: column;}
+	.our-wrapper .right-wrap {width: 100%; flex-direction: column; margin-top: 0;}
 	.our-wrapper .left-wrap {width: 100%; justify-content: flex-start;}
 	.our-wrapper .part-wrap {width: 100%;}
 	.crew-wrapper .crew-wrap {flex-direction: column;}
-	.crew-wrapper .left-wrap {width: 100%;}
+	.crew-wrapper .left-wrap {width: 100%; margin-top: 0px;}
 	.crew-wrapper .right-wrap {display: flex; width: 100%; flex-wrap: wrap;}
 	.crew-wrapper .right-wrap .member {flex: 50%; margin-bottom: 50px;}
 	}
