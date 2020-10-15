@@ -14,13 +14,7 @@
 	}
 
 	function slideInit() {
-		//$slideWrap.html($slides[idx].clone());
 		$(slides[idx]).clone().appendTo($slideWrap.empty());
-		/*
-		$txt.find(".text").css("opacity");
-		$txt.find(".text").css("transform");
-		$txt.find(".text").css({"opacity": 1, "transform": "translateX(0)"});
-		*/
 	}
 
 	$btnPrev.click(onPrev);

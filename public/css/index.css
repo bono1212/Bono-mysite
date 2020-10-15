@@ -54,13 +54,41 @@ html, body {width: 100%; font-size: 1rem; font-size: 16px;}
 /* *********slide********** check*/ 
 .header-wrapper .banner-wrap {width: 100%; overflow: hidden; height: 500px;}
 .header-wrapper .slide-wrap {position: relative; height: 100%;}
-.header-wrapper .slide-wrap .slide {height: 100%;}
+.header-wrapper .slide-wrap .slide {width: 100%; height: 100%; left: 0; top: 0; position: absolute;}
 .header-wrapper .slide:nth-child(2) {position: absolute; top: 0; left: 0; opacity: 0;}
-.header-wrapper .btn-prev, .header-wrapper .btn-next {font-size: 2em; color: #fff; position: absolute; cursor: pointer; user-select: none; color: #111; transition: all 0.5s; padding: 0 10px; top: 50%;}
+.header-wrapper .btn-prev, .header-wrapper .btn-next {font-size: 2em; color: #fff; position: absolute; cursor: pointer; user-select: none; color: #111; transition: all 0.5s; padding: 0 10px; top: 50%; z-index: 999;}
 .header-wrapper .btn-next {right: 0px;}
 .header-wrapper .btn-prev:hover {transform: translateX(10px);}
 .header-wrapper .btn-next:hover {transform: translateX(-10px);}
 
+.header-wrapper .slide .text {width: 100%; z-index: 1; position: absolute;}
+.header-wrapper .slide .text-bg {position: absolute; left: 50%; top: 250px; transform: translate(-50%, -50%); color: #fff; font-size: 4.25rem; white-space: nowrap; text-align: center; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; overflow: hidden; animation-name: bg; animation-duration: 1s; animation-fill-mode: forwards;}
+.header-wrapper .slide-wrap .text-bg .box {width: 100%; height: 100%; background-color: black; position: absolute; top: 0; left: 0; animation-name: box; animation-duration: 1s; animation-fill-mode: forwards;}
+.header-wrapper .slide .text-bg div {position: relative;}
+.header-wrapper .slide .text-small-bg {position: absolute; top: 150px; left: 50%; transform: translate(-50%, -50%);color: #fff; font-size: 4rem; white-space: nowrap; text-align: center; width: 400px; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; background-color: #111; animation-name: small-bg; animation-duration: 1s; animation-fill-mode: forwards; overflow: hidden;}
+.header-wrapper .slide .text-small-bg .box {width: 100%; height: 100%; background-color: black; position: absolute; top: 0; left: 0; animation-name: box; animation-duration: 1s; animation-fill-mode: forwards;}
+.header-wrapper .slide .select-small-bg {position: absolute; top: 350px; left: 50%; transform: translate(-50%, -50%);color: #111; font-size: 1.5rem; white-space: nowrap; text-align: center; width: 200px; font-family: 'Barlow Condensed', sans-serif; background-color: #fff; padding: 10px 0; letter-spacing: -1; font-weight: 600; animation-name: select-bg; animation-duration: 1s; animation-fill-mode: forwards; overflow: hidden;}
+.header-wrapper .slide .select-small-bg .box {width: 100%; height: 100%; background-color: black; position: absolute; top: 0; left: 0; animation-name: box; animation-duration: 1s; animation-fill-mode: forwards;}
+
+@keyframes bg {
+	0% {width: 0;}
+	100% {width: 700px;}
+}
+@keyframes small-bg {
+	0% {width: 0;}
+	100% {width: 550px;}
+}
+@keyframes select-bg {
+	0% {width: 0;}
+	100% {width: 200px;}
+}
+
+@keyframes box {
+	0% {transform: translateX(0);}
+	100% {transform: translateX(0);}
+}
+
+/* **************bar menu**************** */
 .header-wrapper .bar-menu {width: 100%; height: 300px; display: none; background-color: #fff; z-index: 1; position: absolute; top: 10vh; left: 0;}
 .header-wrapper .bar-menu .top-down {padding: 2em; cursor: pointer;}
 .header-wrapper .bar-menu .top-down div {font-size: 1.25em; display: flex; justify-content: space-between; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; padding-bottom: 2px;}
@@ -157,14 +185,14 @@ img.rotate {animation: rotate 3s linear infinite; transform-origin: 50% 50%; tra
 .text-wrapper {width: 100%; background-color: #111; height: 420px; position: relative; display: flex; align-items: center; font-size: 1em;}
 .black-wrapper {width: 50%; margin: auto; position: relative; color: #fff;}
 .black-wrapper .stage {width: 100%; height: 20%; overflow: hidden;}
-.black-wrapper .slide-wrap {position: relative;}
-.black-wrapper .slide-wrap .slide {position: absolute; width: 100%; top: 0;}
-.black-wrapper .slide-wrap .slide:nth-child(1) {position: relative; left: 0;}
-.black-wrapper .slide-wrap .slide:nth-child(2) {left: 100%;}
-.black-wrapper .slide-wrap .slide:nth-child(3) {left: 200%;}
+.black-wrapper .slide-wrap1 {position: relative;}
+.black-wrapper .slide-wrap1 .slide {position: absolute; width: 100%; top: 0;}
+.black-wrapper .slide-wrap1 .slide:nth-child(1) {position: relative; left: 0;}
+.black-wrapper .slide-wrap1 .slide:nth-child(2) {left: 100%;}
+.black-wrapper .slide-wrap1 .slide:nth-child(3) {left: 200%;}
 
-.black-wrapper .stage .slide-wrap .slide p {font-size: 1.5em; font-weight: 500; font-family: 'Barlow Condensed'; line-height: 1.2; text-transform: uppercase;}
-.black-wrapper .stage .slide-wrap .slide .author {font-size: 1em; margin-top: 20px;}
+.black-wrapper .stage .slide-wrap1 .slide p {font-size: 1.5em; font-weight: 500; font-family: 'Barlow Condensed'; line-height: 1.2; text-transform: uppercase;}
+.black-wrapper .stage .slide-wrap1 .slide .author {font-size: 1em; margin-top: 20px;}
 
 
 /* ****.crew-wrapper***** */
