@@ -245,7 +245,7 @@ html, body {width: 100%; font-size: 16px;}
 
 
  /* ********clients-wrapper******* */
- .clients-wrapper .stage {width: 80%; position: relative; overflow: hidden; border: 1px solid blue; margin: auto; padding: 100px 0;}
+ .clients-wrapper .stage {width: 80%; position: relative; overflow: hidden; border: 1px solid blue; margin: auto; padding: 150px 0;}
  .clients-wrapper .stage .slide-wrap {position: relative; border: 1px solid red; width: 125%; left: -12.5%; display: flex; align-items: center; justify-content: center; align-items: center; height: 100%;}
  .clients-wrapper .slide {position: relative; flex: 10% 0 0; border: 1px solid green; text-align: center;}
  .clients-wrapper .stage img {width: 120px; height: auto;}
