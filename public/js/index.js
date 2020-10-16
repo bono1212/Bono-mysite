@@ -172,7 +172,7 @@ new WOW({
 		var i, html;
 		for (i in datas) {
 			html = '<div class="slide">';
-			html += '<img src="' + datas[i].src + '" class="w100">';
+			html += '<img src="' + datas[i].src + '" class="w-100">';
 			html += '</div>';
 			$slides.push($(html));
 		}

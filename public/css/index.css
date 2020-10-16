@@ -222,14 +222,14 @@ html, body {width: 100%; font-size: 16px;}
 }
 
 /* *******news-wrapper********* */
-.news-wrapper {width: 100%; background-color: #f5f5f5; padding: 50px 0;}
-.news-wrapper .news-wrap {width: 80%; display: flex; justify-content: center; position: relative;}
-.news-wrapper .news-wrap .left-wrap {width: 40%; font-size: 4em; font-family: 'Barlow Condensed'; font-weight: 600; display: flex; justify-content: flex-end; border: 1px solid red; padding-right: 2em;}
-.news-wrapper .news-wrap .right-wrap {display: flex; width: 60%; flex-wrap: wrap; cursor: pointer; border: 1px solid pink;}
-.news-wrapper .right-wrap .text-wrap {width: 340px; border: 2px solid black; position: relative;}
-.news-wrapper .right-wrap .box {border: 1px solid green; width: 50%; padding-right: 10px; position: relative;}
+.news-wrapper {width: 100%; background-color: #f5f5f5; padding: 50px 0; display: flex; justify-content: center;}
+.news-wrapper .news-wrap {width: 70%; display: flex; justify-content: center; position: relative;}
+.news-wrapper .news-wrap .left-wrap {width: 30%; font-size: 4em; font-family: 'Barlow Condensed'; font-weight: 600; display: flex; justify-content: flex-start; border: 1px solid red;}
+.news-wrapper .news-wrap .right-wrap {display: flex; width: 70%; flex-wrap: wrap; cursor: pointer; border: 1px solid pink;}
+.news-wrapper .right-wrap .text-wrap {width: 90%; border: 2px solid black; position: relative;}
+.news-wrapper .right-wrap .box {border: 1px solid green; width: 50%; padding-right: 10px;}
 .news-wrapper .right-wrap .box .date {font-size: 1em; color: #909090;}
-.news-wrapper .right-wrap .text-wrap .big-title {font-size: 2em; font-family: 'Barlow Condensed'; font-weight: 600; line-height: 1.2; z-index: 2;}
+.news-wrapper .right-wrap .text-wrap .big-title {font-size: 2em; font-family: 'Barlow Condensed'; font-weight: 600; line-height: 1.2;}
 .news-wrapper .right-wrap .text-wrap .read-more {font-size: 1em; letter-spacing: -1px; font-family: 'Barlow Condensed'; font-weight: bold;}
 .news-wrapper .right-wrap .date:hover {color: #111;}
 
@@ -241,13 +241,13 @@ html, body {width: 100%; font-size: 16px;}
 .news-wrapper .text-wrap:hover .bg:nth-child(3):after {transition-delay: 0.25s;} 
 
 .news-wrapper .text-wrap:hover .big-title {color: #fff;}
-.news-wrapper .text-wrap:hover .bg::after {transform: scaleX(1);}
+.news-wrapper .text-wrap:hover .bg::after {transform: scaleX(1.1);}
 
 
  /* ********clients-wrapper******* */
- .clients-wrapper .stage {width: 80%; position: relative; /*overflow: hidden;*/ border: 1px solid blue; margin: auto; padding: 150px 0;}
- .clients-wrapper .stage .slide-wrap {position: relative; border: 1px solid red; width: 125%; left: -12.5%; display: flex; align-items: center; justify-content: center; align-items: center; height: 100%;}
- .clients-wrapper .slide {position: relative; flex: 10% 0 0; border: 1px solid green; text-align: center;}
+ .clients-wrapper .stage {width: 80%; position: relative; overflow: hidden; margin: auto; padding: 150px 0;}
+ .clients-wrapper .stage .slide-wrap {position: relative; width: 125%; left: -12.5%; display: flex; align-items: center; justify-content: center; align-items: center; height: 100%;}
+ .clients-wrapper .slide {position: relative; flex: 10% 0 0; text-align: center;}
  .clients-wrapper .stage img {width: 120px; height: auto;}
 
  /* ********map-wrapper******* */
