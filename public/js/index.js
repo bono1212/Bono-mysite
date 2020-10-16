@@ -160,14 +160,6 @@ new WOW({
 		{ id: 5, src: '../img/client-6.png', title: 'logo6' },
 		{ id: 6, src: '../img/client-7.png', title: 'logo7' },
 		{ id: 7, src: '../img/client-8.png', title: 'logo8' },
-		{ id: 8, src: '../img/client-1.png', title: 'logo1' },
-		{ id: 9, src: '../img/client-2.png', title: 'logo2' },
-		{ id: 10, src: '../img/client-3.png', title: 'logo3' },
-		{ id: 11, src: '../img/client-4.png', title: 'logo4' },
-		{ id: 12, src: '../img/client-5.png', title: 'logo5' },
-		{ id: 13, src: '../img/client-6.png', title: 'logo6' },
-		{ id: 14, src: '../img/client-7.png', title: 'logo7' },
-		{ id: 15, src: '../img/client-8.png', title: 'logo8' }
 	];
 	var $wrapper = $(".clients-wrapper");
 	var $clientWrap = $(".slide-wrap", $wrapper);
@@ -202,7 +194,7 @@ new WOW({
 		if(idx == 8) idx = 0;
 		else idx++;
 		//console.log((-idx*8) + "%");
-		$clientWrap.stop().animate({ "left": (-idx*8) + "%" }, 500, slideInit);
+		$clientWrap.stop().animate({ "left": "-25%" }, 500, slideInit);
 	}
 
 	init();
