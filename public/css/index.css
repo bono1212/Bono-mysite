@@ -306,7 +306,7 @@ html, body {width: 100%; font-size: 16px;}
 
 
 	/* ******* 반응형 ************** */
-	@media screen and (max-width: 1199px) {
+/* 	@media screen and (max-width: 1199px) {
 		.icon-wrapper .anim-wrap {flex: 50% 0 0;}
 		.header-wrapper .top-wrap .navi-wrap {display: none;}
 		.icon-wrapper .anim-box {padding: 50px 0;}
@@ -377,4 +377,4 @@ html, body {width: 100%; font-size: 16px;}
 	.crew-wrapper .right-wrap {display: flex; width: 100%; flex-wrap: wrap;}
 	.crew-wrapper .right-wrap .member {flex: 100%;}
 	.crew-wrapper .right-wrap .member img {width: 420px; height: auto;}
-	}
+	} */
