@@ -193,7 +193,6 @@ new WOW({
 	function ani() {
 		if(idx == 8) idx = 0;
 		else idx++;
-		//console.log((-idx*8) + "%");
 		$clientWrap.stop().animate({ "left": "-25%" }, 500, slideInit);
 	}
 
